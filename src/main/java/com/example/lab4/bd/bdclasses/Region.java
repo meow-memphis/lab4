@@ -3,11 +3,21 @@ package com.example.lab4.bd.bdclasses;
 public class Region {
 
     int id;
-    String regionName;
+    String name;
 
-    public Region(int id, String regionName) {
+    private double consumption;
+
+    public double getConsumption() {
+        return consumption;
+    }
+
+    public void setConsumption(double consumption) {
+        this.consumption = this.consumption + consumption;
+    }
+
+    public Region(int id, String name) {
         this.id = id;
-        this.regionName = regionName;
+        this.name = name;
     }
 
     public int getId() {
@@ -18,11 +28,11 @@ public class Region {
         this.id = id;
     }
 
-    public String getRegionName() {
-        return regionName;
+    public String getName() {
+        return name;
     }
 
-    public void setRegionName(String regionName) {
-        this.regionName = regionName;
+    public void setName(String name) {
+        this.name = name;
     }
 }

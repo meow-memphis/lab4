@@ -3,8 +3,18 @@ package com.example.lab4.bd.bdclasses;
 public class Country {
 
     int id;
-    String countryName;
+    String name;
     int regionID;
+
+    private double consumption;
+
+    public double getConsumption() {
+        return consumption;
+    }
+
+    public void setConsumption(double consumption) {
+        this.consumption = this.consumption + consumption;
+    }
 
     public int getId() {
         return id;
@@ -14,12 +24,12 @@ public class Country {
         this.id = id;
     }
 
-    public String getCountryName() {
-        return countryName;
+    public String getName() {
+        return name;
     }
 
-    public void setCountryName(String countryName) {
-        this.countryName = countryName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getRegionID() {
@@ -30,9 +40,9 @@ public class Country {
         this.regionID = regionID;
     }
 
-    public Country(int id, String countryName, int regionID) {
+    public Country(int id, String name, int regionID) {
         this.id = id;
-        this.countryName = countryName;
+        this.name = name;
         this.regionID = regionID;
     }
 }

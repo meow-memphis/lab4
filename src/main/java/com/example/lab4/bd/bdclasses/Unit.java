@@ -3,7 +3,7 @@ package com.example.lab4.bd.bdclasses;
 public class Unit {
 
     private int id;
-    private String unitName;
+    private String name;
     private String type;
     private int thermalCapacity;
     private double loadFactor;
@@ -13,7 +13,7 @@ public class Unit {
 
     public Unit(int id, String unitName, String type, int thermalCapacity, double loadFactor, double burnout, int siteID) {
         this.id = id;
-        this.unitName = unitName;
+        this.name = unitName;
         this.type = type;
         this.thermalCapacity = thermalCapacity;
         this.loadFactor = loadFactor;
@@ -38,12 +38,12 @@ public class Unit {
         this.siteID = siteID;
     }
 
-    public String getUnitName() {
-        return unitName;
+    public String getName() {
+        return name;
     }
 
-    public void setUnitName(String unitName) {
-        this.unitName = unitName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getType() {

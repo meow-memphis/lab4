@@ -33,14 +33,14 @@ public class DBProvider {
     }
 
     public void getAll(ArrayList<Reactor> reactorArrayList) throws SQLException {
-        getUnits(res("units"), "units", reactorArrayList);
-        getSites(res("sites"), "sites");
-        getCompanies(res("companies"), "companies");
-        getCountries(res("countries"), "countries");
-        getRegions(res("regions"), "regions");
+        setUnits(res("units"), "units", reactorArrayList);
+        setSites(res("sites"), "sites");
+        setCompanies(res("companies"), "companies");
+        setCountries(res("countries"), "countries");
+        setRegions(res("regions"), "regions");
     }
 
-    public void getUnits(ResultSet res, String tabName, ArrayList<Reactor> reactorArrayList) throws SQLException {
+    public void setUnits(ResultSet res, String tabName, ArrayList<Reactor> reactorArrayList) throws SQLException {
 
         while (res.next()) {
 
@@ -71,7 +71,7 @@ public class DBProvider {
         }
     }
 
-    public void getSites(ResultSet res, String tabName) throws SQLException {
+    public void setSites(ResultSet res, String tabName) throws SQLException {
 
         while (res.next()) {
 
@@ -87,7 +87,7 @@ public class DBProvider {
         }
     }
 
-    public void getCompanies(ResultSet res, String tabName) throws SQLException {
+    public void setCompanies(ResultSet res, String tabName) throws SQLException {
 
         while (res.next()) {
             int id = res.getInt(tabName + ".id");
@@ -96,7 +96,7 @@ public class DBProvider {
         }
     }
 
-    public void getCountries(ResultSet res, String tabName) throws SQLException {
+    public void setCountries(ResultSet res, String tabName) throws SQLException {
 
         while (res.next()) {
             int id = res.getInt(tabName + ".id");
@@ -106,13 +106,33 @@ public class DBProvider {
         }
     }
 
-    public void getRegions(ResultSet res, String tabName) throws SQLException {
+    public void setRegions(ResultSet res, String tabName) throws SQLException {
 
         while (res.next()) {
             int id = res.getInt(tabName + ".id");
             String name = res.getString(tabName + ".region_name").trim();
             regions.add(new Region(id, name));
         }
+    }
+
+    public ArrayList<Unit> getUnits() {
+        return units;
+    }
+
+    public ArrayList<Site> getSites() {
+        return sites;
+    }
+
+    public ArrayList<Company> getCompanies() {
+        return companies;
+    }
+
+    public ArrayList<Country> getCountries() {
+        return countries;
+    }
+
+    public ArrayList<Region> getRegions() {
+        return regions;
     }
 }
 

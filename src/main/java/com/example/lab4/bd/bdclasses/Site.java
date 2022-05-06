@@ -3,13 +3,23 @@ package com.example.lab4.bd.bdclasses;
 public class Site {
 
     int id;
-    String siteName;
+    String name;
     int countryID;
     int companyID;
 
+    private double consumption;
+
+    public double getConsumption() {
+        return consumption;
+    }
+
+    public void setConsumption(double consumption) {
+        this.consumption = this.consumption + consumption;
+    }
+
     public Site(int id, String siteName, int countryID, int companyID) {
         this.id = id;
-        this.siteName = siteName;
+        this.name = siteName;
         this.countryID = countryID;
         this.companyID = companyID;
     }
@@ -22,12 +32,12 @@ public class Site {
         this.id = id;
     }
 
-    public String getSiteName() {
-        return siteName;
+    public String getName() {
+        return name;
     }
 
-    public void setSiteName(String siteName) {
-        this.siteName = siteName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getCountryID() {
