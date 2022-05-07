@@ -142,7 +142,7 @@
     },
     {
       "name": "PWR",
-      "burnup": "40",
+      "burnup": "42",
       "kpd": "0.33",
       "enrichment": "0.044",
       "termal_capacity": "3200",

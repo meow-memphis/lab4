@@ -4,6 +4,15 @@ public class Region {
 
     int id;
     String name;
+    int col;
+
+    public int getCol() {
+        return col;
+    }
+
+    public void setCol(int col) {
+        this.col = this.col + col;
+    }
 
     private double consumption;
 

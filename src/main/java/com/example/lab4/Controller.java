@@ -58,10 +58,11 @@ public class Controller {
             parserJSON = new ParserJSON(new File((getClass().getResource("ReactorType.json").getFile())));
             provider = new DBProvider();
             provider.connect(new File(getClass().getResource("Lab3.accdb").getFile()));
-            provider.getAll(parserJSON.getReactorArrayList());
+            provider.setAll(parserJSON.getReactorArrayList());
             provider.close();
             calc = new Calc(provider);
             companyT(event);
+            System.out.println();
         } catch (Exception e) {
             error(e);
         }
@@ -134,7 +135,7 @@ public class Controller {
                 File db = dbFC.showOpenDialog(null);
                 provider = new DBProvider();
                 provider.connect(db);
-                provider.getAll(parserJSON.getReactorArrayList());
+                provider.setAll(parserJSON.getReactorArrayList());
                 provider.close();
                 calc = new Calc(provider);
                 companyT(event);

@@ -32,7 +32,7 @@ public class DBProvider {
         return statement.getResultSet();
     }
 
-    public void getAll(ArrayList<Reactor> reactorArrayList) throws SQLException {
+    public void setAll(ArrayList<Reactor> reactorArrayList) throws SQLException {
         setUnits(res("units"), "units", reactorArrayList);
         setSites(res("sites"), "sites");
         setCompanies(res("companies"), "companies");
@@ -63,7 +63,7 @@ public class DBProvider {
                     }
                 }
                 if (burnup == 0) {
-                    burnup = 40;
+                    burnup = 42;
                 }
 
                 units.add(new Unit(id, name, type, thermalCapacity, loadFactor, burnup, siteID));

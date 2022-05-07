@@ -6,6 +6,15 @@ public class Site {
     String name;
     int countryID;
     int companyID;
+    int col;
+
+    public int getCol() {
+        return col;
+    }
+
+    public void setCol(int col) {
+        this.col = this.col+ col;
+    }
 
     private double consumption;
 

@@ -5,6 +5,16 @@ public class Company {
     int id;
     String Name;
 
+    public int getCol() {
+        return col;
+    }
+
+    public void setCol(int col) {
+        this.col = this.col + col;
+    }
+
+    int col;
+
     private double consumption;
 
     public double getConsumption() {

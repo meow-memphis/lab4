@@ -23,6 +23,7 @@ public class Calc {
             for (Unit unit : units) {
                 if (site.getId() == unit.getSiteID()) {
                     site.setConsumption(unit.getConsumption());
+                    site.setCol(1);
                 }
             }
         }
@@ -37,6 +38,7 @@ public class Calc {
             for (Company company : companies) {
                 if (company.getId() == site.getCompanyID()) {
                     company.setConsumption(site.getConsumption());
+                    company.setCol(1);
                 }
             }
         }
@@ -51,6 +53,7 @@ public class Calc {
             for (Country country : countries) {
                 if (site.getCountryID() == country.getId()) {
                     country.setConsumption(site.getConsumption());
+                    country.setCol(1);
                 }
             }
         }
@@ -65,6 +68,7 @@ public class Calc {
             for (Country country : countries) {
                 if (region.getId() == country.getRegionID()) {
                     region.setConsumption(country.getConsumption());
+                    region.setCol(1);
                 }
             }
         }

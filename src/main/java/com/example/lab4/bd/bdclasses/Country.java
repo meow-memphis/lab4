@@ -5,6 +5,15 @@ public class Country {
     int id;
     String name;
     int regionID;
+    int col;
+
+    public int getCol() {
+        return col;
+    }
+
+    public void setCol(int col) {
+        this.col = this.col + col;
+    }
 
     private double consumption;
 
